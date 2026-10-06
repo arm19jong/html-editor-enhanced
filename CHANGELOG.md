@@ -1,3 +1,6 @@
+## [Unreleased]
+* Migrate to standalone `material_ui` package (requires Flutter >= 3.47). Apps still on `package:flutter/material.dart` should wrap with `MaterialUiCompatibilityBridge` in `MaterialApp.builder`.
+
 ## [2.7.1] = 2025-07-12
 * Update dependencies
 

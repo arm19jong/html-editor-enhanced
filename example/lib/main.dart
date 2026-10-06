@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:file_picker/file_picker.dart';
 
@@ -13,6 +13,8 @@ class HtmlEditorExampleApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(),
       darkTheme: ThemeData.dark(),
+      // lets dependencies still on package:flutter/material.dart read theme/localizations
+      builder: (context, child) => MaterialUiCompatibilityBridge(child: child!),
       home: HtmlEditorExample(title: 'Flutter HTML Editor Example'),
     );
   }

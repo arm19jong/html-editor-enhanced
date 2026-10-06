@@ -6,11 +6,13 @@ homepage: https://github.com/tneotia/html-editor-enhanced
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
-  flutter: ">=3.0.0"
+  flutter: ">=3.47.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  # standalone Material design library (replaces package:flutter/material.dart)
+  material_ui: ^1.5.0
   # webview plugin
   flutter_inappwebview: ^6.1.5
   # plugin to get webview's visible fraction for keyboard height adjustment
@@ -36,6 +38,46 @@ dev_dependencies:
     sdk: flutter
   # plugin to help maintain effective Dart standards
   lints: ^5.1.1
+
+dependency_overrides:
+  #html_editor_enhanced
+  flutter_inappwebview:
+    git:
+      url: https://github.com/pichillilorenzo/flutter_inappwebview.git
+      ref: v6.2.0-beta.3
+      path: flutter_inappwebview
+
+  #html_editor_enhanced
+  flutter_keyboard_visibility:
+    git:
+      url: https://github.com/arm19jong/flutter_keyboard_visibility.git
+      ref: 1.0.0
+      path: flutter_keyboard_visibility
+  flutter_keyboard_visibility_windows:
+    git:
+      url: https://github.com/arm19jong/flutter_keyboard_visibility.git
+      ref: 1.0.0
+      path: flutter_keyboard_visibility_windows
+  flutter_keyboard_visibility_platform_interface:
+    git:
+      url: https://github.com/arm19jong/flutter_keyboard_visibility.git
+      ref: 1.0.0
+      path: flutter_keyboard_visibility_platform_interface
+  flutter_keyboard_visibility_web:
+    git:
+      url: https://github.com/arm19jong/flutter_keyboard_visibility.git
+      ref: 1.0.0
+      path: flutter_keyboard_visibility_web
+  flutter_keyboard_visibility_macos:
+    git:
+      url: https://github.com/arm19jong/flutter_keyboard_visibility.git
+      ref: 1.0.0
+      path: flutter_keyboard_visibility_macos
+  flutter_keyboard_visibility_linux:
+    git:
+      url: https://github.com/arm19jong/flutter_keyboard_visibility.git
+      ref: 1.0.0
+      path: flutter_keyboard_visibility_linux
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
